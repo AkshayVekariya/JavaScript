@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="celsius" />
+<p id="result"></p>
+    <button onclick="celsiusToFahrenheit()">celsius temp</button>
+    <button onclick="fahrenheitToCelsius()">fahrenheit temp</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    const celsius = document.getElementById("celsius");
+    const result = document.getElementById("result");
+
+
+  let celsiusToFahrenheit = ()=>{
+   let celsiusTemp = celsius.value
+   let temp1 = (celsiusTemp  * (9/5) + 32) 
+   result.innerText =`${temp1}°C`
+  }
+  
+  let fahrenheitToCelsius = () =>{
+     let fahrenheitTemp = celsius.value
+     let temp2 = (fahrenheitTemp -32) * 5/9
+     result.innerText =`${temp2}°f`
+    
+  }
+
+
+
+  </script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="date" id="date" value="2014-01-01" />
+    <p id="id"></p>
+    <button onclick="countday()">Click-Me</button>
+  </body>
+  <script>
+    const id = document.getElementById("id");
+
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    function countday() {
+      const date = document.getElementById("date");
+      let userDate = new Date(date.value);
+
+      const weekOfDays = userDate.getDay();
+      const day = userDate.getDate();
+      const month = userDate.getMonth();
+      const year = userDate.getFullYear();
+      if (year >= 2014 && year <= 2050) {
+        if (month === 0 && day === 1) {
+            if (weekOfDays === 0) {
+              id.innerText = `year ${year} has ${day} st jan is sunday`;
+              console.log("hello world");
+            } else {
+              id.innerText = `year ${year}  has ${day}st jan is not  sunday`;
+            }
+          }else{
+            id.innerText = `please select 1St jan`;
+          }
+        } else {
+          id.innerText = `you need select year 2014 to 2050`;
+        }
+    
+    }
+  </script>
+</html>

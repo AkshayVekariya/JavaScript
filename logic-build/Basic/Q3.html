@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="dateFunction"></div>
+  </body>
+  <script>
+    let renderDate = document.getElementById("dateFuncation");
+    const todaysDate = new Date();
+
+    const day = todaysDate.getDate();
+    const Month = todaysDate.getMonth() +1;
+    const year = todaysDate.getFullYear();
+
+    let FormateOne = `${day}/${Month}/${year}`;
+    let FormateTwo = `${Month}/${day}/${year}`;
+
+    dateFunction.innerText = "formateOne :-" + FormateOne +  " formateTwo:-" + FormateTwo 
+  </script>
+</html>

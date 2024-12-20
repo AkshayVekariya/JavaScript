@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Before Christmas</title>
+  </head>
+  <body>
+    <h4>day before Christmas</h4>
+    <p id="result"></p>
+    <button onclick="christams()">Calculate ChristmasDay</button>
+  </body>
+  <script>
+    const result = document.getElementById("result");
+    const christamsDate = new Date("2024-12-25");
+    const todayDate = new Date();
+    const christamsTime = christamsDate.getTime();
+    const todayTime = todayDate.getTime();
+    function christams() {
+      let diffTime = christamsTime - todayTime;
+      let dayLeft = Math.floor(diffTime / 1000 / 60 / 60 / 24);
+
+      result.innerText = "Christams before " + dayLeft + "Day"
+    }
+  </script>
+</html>

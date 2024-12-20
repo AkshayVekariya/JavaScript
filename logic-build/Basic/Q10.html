@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="first-input" />
+    <input type="number" id="second-input" />
+    <button onclick="multiply()">multiply</button>
+    <button onclick="divide()">divide</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    
+
+
+    function multiply() {
+      const firstNum = document.getElementById("first-input").value;
+    const secondNum = document.getElementById("second-input").value;
+    const result = document.getElementById("result");
+      const output = firstNum * secondNum;
+      result.innerText = `multiply ${firstNum} * ${secondNum} is output ${output}`;
+    }
+
+    function divide() {
+      const firstNum = document.getElementById("first-input").value;
+    const secondNum = document.getElementById("second-input").value;
+    const result = document.getElementById("result");
+      const output = firstNum / secondNum;
+      result.innerText = `multiply ${firstNum} * ${secondNum} is output ${output}`;
+    }
+  </script>
+</html>
